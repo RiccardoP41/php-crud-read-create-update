@@ -2,6 +2,8 @@
     include __DIR__."/partials/templates/header.php";
     include __DIR__."/partials/home/server.php";
  ?>
+
+ <!-- File da rinominare in "index.php" a lavoro finito -->
     <body>
         <div class="container">
             <table class="table">
@@ -23,7 +25,12 @@
                             <td><?php echo $room["floor"] ?></td>
                             <td><a href="show.php?id=<?php echo $room["id"] ?>">VIEW</a></td>
                             <td><a href="#">UPDATE</a></td>
-                            <td><a href="#">DELETE</a></td>
+                            <td>
+                                <form class="" action="partials/delete/server.php" method="post">
+                                    <input class="btn btn-danger" type="submit" name="" value="DELETE">
+                                    <input type="hidden" name="id" value="<?php echo $room["id"] ?>">
+                                </form>
+                            </td>
                         </tr>
                     <?php } ?>
                 </tbody>
