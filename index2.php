@@ -45,4 +45,4 @@
         <!-- containaer close -->
 <?php
 include __DIR__ . "/partials/templates/footer.php";
- ?>
+?>

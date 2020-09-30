@@ -12,7 +12,6 @@
     } else {
         echo "query error";
     }
-
     $conn->close();
 
  ?>
