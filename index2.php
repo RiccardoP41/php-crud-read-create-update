@@ -4,8 +4,14 @@
  ?>
 
  <!-- File da rinominare in "index.php" a lavoro finito -->
-    <body>
+
         <div class="container">
+        <?php if(!empty($_GET["id"])) {
+            $stanza_cancellata = $_GET["id"]; ?>
+            <div class="alert alert-warning">
+                <?php echo "Hai cancellato la stanza numero $stanza_cancellata"; ?>
+            </div>
+        <?php } ?>
             <table class="table">
                 <thead>
                     <tr>
@@ -24,7 +30,7 @@
                             <td><?php echo $room["room_number"] ?></td>
                             <td><?php echo $room["floor"] ?></td>
                             <td><a href="show.php?id=<?php echo $room["id"] ?>">VIEW</a></td>
-                            <td><a href="#">UPDATE</a></td>
+                            <td><a href="update.php?id=<?php echo $room["id"] ?>">UPDATE</a></td>
                             <td>
                                 <form class="" action="partials/delete/server.php" method="post">
                                     <input class="btn btn-danger" type="submit" name="" value="DELETE">
@@ -36,11 +42,7 @@
                 </tbody>
             </table>
         </div>
-
-
-
-
-
-
-    </body>
-</html>
+        <!-- containaer close -->
+<?php
+include __DIR__ . "/partials/templates/footer.php";
+ ?>

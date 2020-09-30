@@ -4,10 +4,9 @@
 
  ?>
 
-<body>
-    <div class="container">
-        <!-- "index2.php" da rinominare a lavoro finito -->
-        <a href="index2.php">Torna indietro</a>
+
+    <div class="container p-3">
+        <h1>Dettagli della stanza</h1>
         <ul class="list-group">
             <li class="list-group-item">ID: <?php echo $row["id"]; ?></li>
             <li class="list-group-item">Numero della stanza: <?php echo $row["room_number"]; ?></li>
@@ -15,5 +14,7 @@
             <li class="list-group-item">Numero di letti: <?php echo $row["beds"]; ?></li>
         </ul>
     </div>
-</body>
-</html>
+    <!-- containaer close -->
+<?php
+include __DIR__ . "/partials/templates/footer.php";
+ ?>
