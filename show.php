@@ -13,7 +13,6 @@
             <li class="list-group-item">Piano: <?php echo $row["floor"]; ?></li>
             <li class="list-group-item">Numero di letti: <?php echo $row["beds"]; ?></li>
         </ul>
-        <a href="index2.php">Torna alla lista</a>
     </div>
     <!-- containaer close -->
 <?php
